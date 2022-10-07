@@ -14,11 +14,4 @@ class StudentRepositoryTest {
     @Autowired
     public StudentRepository underTest;
 
-    @Test
-    void existsByEmail() {
-        String email = "dev@gmail.com";
-        Student student = new Student("dev", "dev@gmail.com", LocalDate.of(1995,8,15));
-        underTest.save(student);
-        assertThat(underTest.existsByEmail(email)).isTrue();
-    }
 }
