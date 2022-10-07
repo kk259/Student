@@ -13,13 +13,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class StudentRepositoryTest {
     @Autowired
     public StudentRepository underTest;
-    @Test
-    void findByEmail() {
-        String email = "dev@gmail.com";
-        Student student = new Student(2,"dev", "dev@gmail.com", LocalDate.of(1995,8,15),27);
-        underTest.save(student);
-        assertThat(underTest.findByEmail(email)).isNotNull();
-    }
 
     @Test
     void existsByEmail() {
